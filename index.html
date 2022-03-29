@@ -30,6 +30,22 @@
       <span class="day-number">00</span>
     </div>
   </div>
+  <script>
+    
+    const formatSwitchBtn = document.querySelector(".format-switch-btn");
 
+    formatSwitchBtn.addEventListener("click", () => {
+      formatSwitchBtn.classList.toggle("active");
+
+      var formatValue = formatSwitchBtn.getAttribute("data-format");
+
+      if(formatValue === "12"){
+        formatSwitchBtn.setAttribute("data-format", "24");
+      }
+      else{
+        formatSwitchBtn.setAttribute("data-format", "12");
+      }
+    });
+</script>
 </body>
 </html>
